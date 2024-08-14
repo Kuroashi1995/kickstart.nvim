@@ -381,6 +381,17 @@ require('lazy').setup({
     end,
   },
   {
+    'ray-x/lsp_signature.nvim',
+    event = 'VeryLazy',
+    opts = {
+      hint_prefix = '-> ',
+      floating_window = false,
+    },
+    config = function(_, opts)
+      require('lsp_signature').setup(opts)
+    end,
+  },
+  {
     'tpope/vim-fugitive',
   },
   { -- Useful plugin to show you pending keybinds.
@@ -683,7 +694,20 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
-        gopls = {},
+        gopls = {
+          -- cmd = { 'gopls' },
+          -- filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+          -- single_file_support = true,
+          -- settings = {
+          -- gopls = {
+          -- completeUnimported = true,
+          -- usePlaceholders = true,
+          -- analyses = {
+          -- unusedparams = true,
+          -- },
+          -- },
+          -- },
+        },
         -- pyright = {},
         -- rust_analyzer = {},
         markdown_oxide = {},
@@ -889,6 +913,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          -- { name = 'nvim_lsp_signature_help' },
         },
       }
     end,
