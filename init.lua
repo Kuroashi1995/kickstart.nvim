@@ -370,17 +370,17 @@ require('lazy').setup({
       local ui = require 'harpoon.ui'
 
       vim.keymap.set('n', '<leader>a', mark.add_file)
-      vim.keymap.set('n', '<C-f>', ui.toggle_quick_menu)
-      vim.keymap.set('n', '<C-1>', function()
+      vim.keymap.set('n', '<C-Space>', ui.toggle_quick_menu)
+      vim.keymap.set('n', '<C-a>', function()
         ui.nav_file(1)
       end)
-      vim.keymap.set('n', '<C-2>', function()
+      vim.keymap.set('n', '<C-s>', function()
         ui.nav_file(2)
       end)
-      vim.keymap.set('n', '<C-3>', function()
+      vim.keymap.set('n', '<C-d>', function()
         ui.nav_file(3)
       end)
-      vim.keymap.set('n', '<C-4>', function()
+      vim.keymap.set('n', '<C-f>', function()
         ui.nav_file(4)
       end)
     end,
@@ -869,7 +869,7 @@ require('lazy').setup({
 
           -- Scroll the documentation window [b]ack / [f]orward
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
+          --['<C-f>'] = cmp.mapping.scroll_docs(4),
 
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
@@ -885,7 +885,7 @@ require('lazy').setup({
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
           --  completions whenever it has completion options available.
-          ['<C-Space>'] = cmp.mapping.complete {},
+          -- ['<C-Space>'] = cmp.mapping.complete {},
 
           -- Think of <c-l> as moving to the right of your snippet expansion.
           --  So if you have a snippet that's like:
