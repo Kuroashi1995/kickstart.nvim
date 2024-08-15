@@ -370,7 +370,7 @@ require('lazy').setup({
       local ui = require 'harpoon.ui'
 
       vim.keymap.set('n', '<leader>a', mark.add_file)
-      vim.keymap.set('n', '<C-Space>', ui.toggle_quick_menu)
+      vim.keymap.set('n', '<C-q>', ui.toggle_quick_menu)
       vim.keymap.set('n', '<C-a>', function()
         ui.nav_file(1)
       end)
@@ -1003,7 +1003,7 @@ require('lazy').setup({
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.install').prefer_git = false
-      require('nvim-treesitter.install').compilers = { 'clang' }
+      --require('nvim-treesitter.install').compilers = { 'clang' }
       require('nvim-treesitter.configs').setup(opts)
 
       -- There are additional nvim-treesitter modules that you can use to interact
