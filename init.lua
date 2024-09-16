@@ -121,6 +121,9 @@ end)
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Personalize break at
+vim.opt.breakat = '\t;,!? '
+
 -- Save undo history
 vim.opt.undofile = true
 
